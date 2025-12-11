@@ -732,11 +732,18 @@ header ul a:hover{
 /* BLUR EFFECT ANIMAION */
 
 .autoBlur{
-    animation: autoBlurAnimation linear both;
-    animation-timeline: view();
+    filter: blur(0) !important;
+    opacity: 1 !important;
 }
 
-@media screen and (min-width: 1201px){
+/* Uncomment below if you want blur animation on very large screens only */
+/*
+@media screen and (min-width: 1920px){
+    .autoBlur{
+        animation: autoBlurAnimation linear both;
+        animation-timeline: view();
+    }
+    
     @keyframes autoBlurAnimation{
         0%{
             filter: blur(40px);
@@ -751,47 +758,69 @@ header ul a:hover{
         }
     }
 }
+*/
 
 
 /* AUTO DISPLAY ANIMAION */
 .autoDisplay{
-    animation: autoDisplayAnimation both;
-    animation-timeline: view();
-
+    filter: blur(0) !important;
+    opacity: 1 !important;
+    transform: none !important;
 }
 
-@keyframes autoDisplayAnimation{
-    from{
-        filter: blur(10px);
-        transform: translateY(-200px) scale(0);
-    } 50%{
-        opacity: 1;
-        filter: blur(0px);
-        transform: translateX(0) scale(1);
+/* Uncomment if you want this animation */
+/*
+@media screen and (min-width: 1920px){
+    .autoDisplay{
+        animation: autoDisplayAnimation both;
+        animation-timeline: view();
+    }
+
+    @keyframes autoDisplayAnimation{
+        from{
+            filter: blur(10px);
+            transform: translateY(-200px) scale(0);
+        } 50%{
+            opacity: 1;
+            filter: blur(0px);
+            transform: translateX(0) scale(1);
+        }
     }
 }
+*/
 
 
 /* FADEIN_LEFT */
 
 .fadein-left{
-    animation: fadeInLeftAnimation both;
-    animation-timeline: view();
+    filter: blur(0) !important;
+    opacity: 1 !important;
+    transform: none !important;
 }
 
-@keyframes fadeInLeftAnimation{
-    0%{
-        opacity: 0;
-        transform: translateX(-500px) scale(0.2);
-        filter: blur(10px);
-    } 35%,65%{
-        opacity: 1;
-        transform: translateX(0) scale(1);
-        filter: blur(0px);
-    }100%{
-        filter: blur(10px);
+/* Uncomment if you want this animation */
+/*
+@media screen and (min-width: 1920px){
+    .fadein-left{
+        animation: fadeInLeftAnimation both;
+        animation-timeline: view();
+    }
+
+    @keyframes fadeInLeftAnimation{
+        0%{
+            opacity: 0;
+            transform: translateX(-500px) scale(0.2);
+            filter: blur(10px);
+        } 35%,65%{
+            opacity: 1;
+            transform: translateX(0) scale(1);
+            filter: blur(0px);
+        }100%{
+            filter: blur(10px);
+        }
     }
 }
+*/
 
 /* Sidebar */
 
